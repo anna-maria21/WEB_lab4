@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+	font-family: Yanone Kaffeesatz;
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	font-family: Yanone Kaffeesatz;
+	font-size: 30px;
+	padding-left: 6%;
+	padding-right: 6%;
+	margin: 3px 0;
+}
+.in_line {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 40%;
+}
+.menu a{
+	text-decoration: none;
+	color: #000;
+	padding: 0 5%;
+}
+.menu_adapt{
+	display: none;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo1 {
+	display: flex;
+	align-items: center;
+}
+#mons{
+	padding-right: 2%;
+}
+.phone {
+	display: flex;
+	align-items: center;
+}
+.phone a{
+	text-decoration: none;
+	color: #000;
+}
+
+
+.up {
+	text-align: center;
+}
+.up p{
+	padding-left: 6%;
+	padding-right: 6%;
+}
+.up img {
+	width: 100%;
+}
+.up h1 {
+	font-size: 94px;
+}
+.line {
+	width: 40%;
+	margin-bottom: 30px; 
+	background: black;
+	border-width: 0px;
+}
+
+
+.canvas {
+	padding-left: 6%;
+	padding-right: 6%;
+	margin-bottom: 60px;
+}
+.canvas p {
+	width: 100%;
+	text-align: center;
+	font-size: 64px;
+	margin-bottom: 30px;
+}
+.canvas p span {
+	color: #C90000;
+}
+.content {
+	background: rgba(255, 224, 188, 0.5);
+	padding: 2% 6%;
+}
+.content p {
+	font-family: 'Raleway';
+	font-size: 36px;
+}
+.band {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2%;
+}
+.pic {
+	
+}
+.pic img{
+	max-width: 100%;
+	transition: 0.5s;
+}
+.pic img:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+   }
+.band_adapt {
+	display: none;
+	margin-bottom: 0;
+}
+.down {
+	text-align: center;
+}
+.down p {
+	padding-left: 6%;
+	padding-right: 6%;
+}
+.down img {
+	width: 100%;
+}
+
+
+
+.footer {
+	font-family: Yanone Kaffeesatz;
+	font-size: 30px;
+	display: flex;
+	padding-left: 6%;
+	padding-right: 6%;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer_adapt {
+	display: none;
+}
+.main_footer {
+	width: 40%;
+	text-align: center;
+	margin: 0 2%;
+}
+.main_footer img {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.in_footer img {
+	width: 30%;
+	padding: 0 10%;
+}
+.adress {
+	text-align: right;
+}
+.adress p {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	display: inline-block;
+}
+.logo_adapt {
+	display: none;
+}
+
+.hamburger-menu {
+	display: none;
+}
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: absolute;
+  top: 20px;
+  right: 6%;
+  width: 20px;
+  height: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -6px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 6px;
+}
+/* контейнер меню */
+.menu__box {
+	z-index: 5;
+	display: block;
+	position: absolute;
+	visibility: hidden;
+	right: 100%;
+	width: 60%;
+	height: 138px;
+	margin-left: 34%;
+	margin-top: 0;
+	list-style: none;
+	text-align: center;
+	background-color: white;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 15px 24px;
+  color: #000;
+  font-size: 10px;
+  text-decoration: none;
+}
+ul {
+	padding-inline-start: 0;
+}
+.menu__item:hover {
+	background-color: rgba(255, 224, 188, 0.5);;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+    transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+    transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  	transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+}
+
+
+@media screen and (max-width: 1025px) {
+	.main_footer {
+		display: none;
+	}
+	.footer_adapt {
+		display: block;
+		margin: 0 auto;
+	}
+	.logo1 {
+		display: none;
+	}
+	.logo_adapt {
+		display: flex;
+		margin: 0 auto;
+		margin-top: 7px;
+		margin-bottom: 10px;
+    	margin-left: 20%;
+	}
+	.logo_adapt img{
+		max-width: 35%;
+	}
+	.adress {
+		display: none;
+	}
+	.adress_adapt {
+		margin-top: 10px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	.adress_adapt p {
+		margin-top: 5px;
+		display: inline-block;
+	}
+	.in_footer {
+		display: flex;
+		margin-left: 6%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		justify-content: space-between;
+	}
+	.in_footer img {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 992px) {
+	.logo {
+		width: 40%;
+	}
+	#bm {
+		width: 48%;
+	}
+	#mons {
+		width: 50%;
+	}
+	.menu {
+		display: none;
+	}
+	.header {
+		font-size: 24px;
+	}
+	.phone_img {
+		width: 15%;
+	}
+	.menu_adapt {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.menu_adapt a{
+		text-decoration: none;
+		color: #000;
+		padding: 20px 10%;
+	}
+	.footer {
+		font-size: 20px;
+    	align-items: center;
+    	justify-content: space-between;
+	}
+	.up h1 {
+		font-size: 64px;
+	}
+	.up p {
+		font-size: 18px;
+	}
+	.canvas p {
+		font-size: 48px;
+		margin-bottom: 15px;
+	}
+	.content p {
+		font-size: 30px;
+	}
+	.down p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 824px) {
+	.adress {
+		font-size: 18px;
+	}
+	.adress img {
+		width: 8%;
+	}
+	.down p {
+		font-size: 14px;
+	}
+	.canvas {
+		margin-bottom: 30px;
+	}
+	.up p {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 645px) {
+	.adress {
+		font-size: 14px;
+	}
+	.menu_adapt a {
+    	padding: 10px 7%;
+	}
+	.up h1 {
+		font-size: 48px;
+	}
+	.up p {
+		font-size: 12px;
+	}
+	.canvas p {
+		font-size: 36px;
+	}
+	.content p {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.menu_adapt {
+    	display: none;
+	}
+	.header {
+		display: inline-flex;
+	} 
+	.menu__box {
+		margin-top: 30px;
+	}
+	.menu__item {
+		font-size: 16px;
+	}
+	.hamburger-menu {
+		display: flex;
+	}
+	.phone {
+		display: none;
+	}
+	.adress {
+		font-size: 14px;
+	}
+	.up h1 {
+		font-size: 32px;
+	}
+	
+	.canvas p {
+		font-size: 28px;
+	}
+	.content p {
+		font-size: 18px;
+	}
+	.band {
+		display: none;
+	}
+	.band_adapt {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2%;
+	}
+	.down p {
+		font-size: 14px;
+	}
+	.line {
+		width: 60%;
+		margin-bottom: 10px;
+		margin-top: 5px;
+	}
+	.canvas {
+		margin-bottom: 20px;
+	}
+	.canvas p{
+		margin-bottom: 10px;
+	}
+}

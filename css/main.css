@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+	font-family: 'Raleway';
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	font-family: Yanone Kaffeesatz;
+	font-size: 30px;
+	padding-left: 6%;
+	padding-right: 6%;
+	margin: 3px 0;
+}
+.in_line {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 40%;
+}
+.menu a{
+	text-decoration: none;
+	color: #000;
+	padding: 0 5%;
+}
+.menu_adapt{
+	display: none;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+.logo1 {
+	display: flex;
+	align-items: center;
+}
+#mons{
+	padding-right: 2%;
+}
+.phone {
+	display: flex;
+	align-items: center;
+}
+.phone a{
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+.offer {
+	position: relative;
+	margin: 0;
+	margin-bottom: 200px;
+}
+.offer img {
+	width: 100%;
+}
+.content {
+	width: 44%;
+	position: absolute;
+	top: 25%;
+	left: 6%;
+}
+
+.offertext {
+	width: 100%;
+	color: #000;
+	background: rgba(255, 224, 188, 0.5);
+	text-align: center;
+}
+.zag {
+	font-family: Yanone Kaffeesatz;
+	font-size: 64px;
+}
+.quote {
+	text-align: right;
+	padding: 40px 40px 0;
+}
+.name {
+	font-size: 36px;
+	padding-right: 40px;
+	text-align: right;
+}
+.text {
+	font-size: 21px;
+	padding: 20px 40px 30px 70px;
+	text-align: right;
+}
+.btn {
+	background: rgba(201, 0, 0, 0.75);
+	font-family: Yanone Kaffeesatz;
+	font-size: 36px;
+	color: #000;
+	padding: 10px;
+	border: 0;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+.btn_width1 {
+	width: 60%;
+}
+
+.cent {
+	text-align: center;
+}
+.block2 {
+	margin: 0 auto;
+	margin-bottom: 75px;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+.line {
+	width: 60%;
+	margin-bottom: 30px; 
+	background: black;
+	border-width: 0px;
+}
+.wrapper {
+	display: flex;
+}
+.wrapper1 {
+	display: flex;
+}
+.photo {
+	width: 48%;
+	margin-right: 2%;
+}
+.photo img { 
+	max-width: 100%;
+}
+.photo1 {
+	width: 100%;
+}
+.photo_adapt {
+	display: none;
+}
+.biography {
+	width: 48%;
+	margin-left: 2%;
+	color: #000;
+	background: rgba(255, 224, 188, 0.5);
+}
+.mons {
+	font-family: Yanone Kaffeesatz;
+	font-size: 64px;
+	margin: 50px 0 15px 0;
+}
+.biography p {
+	margin: 40px 80px 40px 60px;
+}
+
+
+
+.block3 p {
+	width: 100%;
+	text-align: center;
+}
+.block3 p span {
+	color: #C90000;
+}
+.canvas {
+	width: 35%;
+	padding-left: 15%;
+	text-align: center;
+}
+.sticks {
+	width: 35%;
+	padding-right: 15%;
+	text-align: center;
+}
+.big {
+	font-family: Yanone Kaffeesatz;
+	font-size: 48px;
+}
+.small {
+	font-family: 'Raleway';
+	font-size: 24px;
+}
+.btn_width2 {
+	margin-top: 20px;
+	width: 30%;
+}
+.block3 {
+	text-align: center;
+}
+.brushes {
+	width: 100%;
+}
+
+
+.footer {
+	font-family: Yanone Kaffeesatz;
+	font-size: 30px;
+	display: flex;
+	padding-left: 6%;
+	padding-right: 6%;
+	align-items: center;
+	justify-content: space-between;
+}
+.footer_adapt {
+	display: none;
+}
+.main_footer {
+	width: 40%;
+	text-align: center;
+	margin: 0 2%;
+}
+.main_footer img {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.in_footer img {
+	width: 30%;
+	padding: 0 10%;
+}
+.adress {
+	text-align: right;
+}
+.adress a {
+	text-decoration: none;
+	color: #000;
+}
+.adress p {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	display: inline-block;
+}
+.logo_adapt {
+	display: none;
+}
+
+.hamburger-menu {
+	display: none;
+}
+/* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: absolute;
+  top: 20px;
+  right: 6%;
+  width: 20px;
+  height: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -6px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 6px;
+}
+/* контейнер меню */
+.menu__box {
+	z-index: 5;
+	display: block;
+	position: absolute;
+	visibility: hidden;
+	right: 100%;
+	width: 60%;
+	height: 138px;
+	margin-left: 34%;
+	margin-top: 0;
+	list-style: none;
+	text-align: center;
+	background-color: white;
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 15px 24px;
+  color: #000;
+  text-decoration: none;
+}
+ul {
+	padding-inline-start: 0;
+}
+.menu__item:hover {
+	background-color: rgba(255, 224, 188, 0.5);;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+	transform: rotate(45deg);
+    transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0);
+    transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  	transition: all 0.3s ease-out;
+}
+#menu__toggle:checked ~ .menu__box {
+	visibility: visible;
+	left: 0;
+}
+
+@media screen and (max-width: 1500px) {
+	.offer {
+		margin-bottom: 250px;
+	}
+}
+@media screen and (max-width: 1350px) {
+	.offer {
+		margin-bottom: 400px;
+	}
+	.btn {
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 1240px) {
+	.offer {
+		margin-bottom: 450px;
+	}
+}
+@media screen and (max-width: 1120px) {
+	.offer {
+		margin-bottom: 520px;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.offer {
+		margin-bottom: 550px;
+	}
+	.main_footer {
+		display: none;
+	}
+	.footer_adapt {
+		display: block;
+		margin: 0 auto;
+	}
+	.logo1 {
+		display: none;
+	}
+	.logo_adapt {
+		display: flex;
+		margin: 0 auto;
+		margin-top: 7px;
+		margin-bottom: 10px;
+    	margin-left: 20%;
+	}
+	.logo_adapt img{
+		max-width: 35%;
+	}
+	.adress {
+		display: none;
+	}
+	.adress_adapt {
+		margin-top: 10px;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	.adress_adapt p {
+		margin-top: 5px;
+		display: inline-block;
+	}
+	.in_footer {
+		display: flex;
+		margin-left: 6%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		justify-content: space-between;
+	}
+	.in_footer img {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.logo {
+		width: 40%;
+	}
+	#bm {
+		width: 48%;
+	}
+	#mons {
+		width: 50%;
+	}
+	.menu {
+		display: none;
+	}
+	.header {
+		font-size: 24px;
+	}
+	.phone_img {
+		width: 15%;
+	}
+	.menu_adapt {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.menu_adapt a{
+		text-decoration: none;
+		color: #000;
+		padding: 20px 10%;
+	}
+	.offer {
+		margin-bottom: 250px;
+	}
+	.zag {
+		font-size: 45px;
+	}
+	.name {
+		font-size: 24px;
+		padding-right: 20px;
+	}
+	.text {
+		font-size: 16px;
+		padding: 15px 20px 20px 40px;
+	}
+	.biography p {
+		padding: 20px 40px 20px 30px;
+		font-size: 18px;
+		margin: 0;
+	}
+	p.mons {
+		font-size: 45px;
+		padding: 20px 0 0 30px;
+	}
+	.quote {
+		padding: 30px 20px 0;
+	} 
+	.btn {
+		font-size: 24px;
+	}
+	.wrapper {
+		display: flex;
+		align-items: center;
+	}
+	.wrapper1 {
+		display: block;
+	}
+	.canvas {
+		width: 100%;
+		padding-left: 0;
+		margin: 20px auto;
+	}
+	.sticks {
+		width: 100%;
+		padding-right: 0;
+		margin: 20px auto;
+	}
+	.footer {
+		font-size: 20px;
+    	align-items: center;
+    	justify-content: space-between;
+	}
+	.content {
+		width: 54%;
+	}
+}
+@media screen and (max-width: 850px) {
+	.offer {
+		margin-bottom: 270px;
+	}
+	
+}
+@media screen and (max-width: 824px) {
+	.adress {
+		font-size: 18px;
+	}
+	.adress img {
+		width: 8%;
+	}
+}
+@media screen and (max-width: 795px) {
+	.offer {
+		margin-bottom: 300px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.offer {
+		margin-bottom: 410px;
+	}
+	.photo1 {
+		display: none;
+	}
+	.photo_adapt {
+		margin: 0 auto;
+		width: 75%;
+		display: block;
+		color: #000;
+		padding: 10px 5%;
+	}
+	.biography {
+		width: 65%;
+	}
+	.line {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 645px) {
+	.offer {
+		margin-bottom: 300px;
+	}
+	.zag {
+		font-size: 30px;
+	}
+	.quote {
+		padding: 20px 20px 0;
+	}
+	.name {
+		font-size: 20px;
+	}
+	.text {
+		font-size: 14px;
+		padding: 15px 20px 20px 30px;
+	}
+	.btn {
+		font-size: 20px;
+		padding: 7px;
+		margin-bottom: 15px;
+	}
+	.biography {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.biography p {
+		padding: 5px 40px 10px 30px;
+		font-size: 14px;
+		margin: 0;
+	}
+	p.mons {
+		font-size: 30px;
+		padding: 20px 0 0 30px;
+	}
+	.photo_adapt {
+		width: 80%;
+	}
+	.btn_width2 {
+		margin-top: 5px;
+		width: 50%;
+	}
+	.sticks {
+		margin-bottom: 5px;
+	}
+	.adress {
+		font-size: 14px;
+	}
+	.menu_adapt a {
+    	padding: 10px 7%;
+	}
+	.big {
+		font-size: 30px;
+	}
+	.small {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.offer {
+		margin-bottom: 280px;
+	}
+	.header {
+		font-size: 16px;
+	}
+	.menu_adapt {
+    	display: none;
+	}
+	.header {
+		display: inline-flex;
+	} 
+	.menu__box {
+		margin-top: 30px;
+	}
+	.menu__item {
+		font-size: 18px;
+	}
+	.photo_adapt {
+		width: 80%;
+	}
+	.hamburger-menu {
+		display: flex;
+	}
+	.phone {
+		display: none;
+	}
+	.canvas img {
+		width: 60%;
+	}
+	.sticks img {
+		width: 60%;
+	}
+	.adress {
+		font-size: 14px;
+	}
+	.zag {
+		font-size: 26px;
+	}
+	.quote {
+		padding: 10px 10px 0;
+	}
+	.name {
+		font-size: 14px;
+		padding-right: 10px;
+	}
+	.text {
+		font-size: 14px;
+		padding: 10px 10px 0 10px;
+	}
+	.biography p {
+		font-size: 14px;
+		padding: 5px 20px 10px 15px;
+	}
+	p.mons {
+		font-size: 20px;
+		padding: 10px 0 0 15px;
+	}
+	.biography {
+		padding-bottom: 5px;
+	}
+	.btn {
+		margin-bottom: 10px;
+		margin-top: 10px;
+		padding: 7px; 
+	}
+	.btn_width1 {
+	    width: 80%;
+	}
+}
+@media screen and (max-width: 440px) {
+	.offer {
+		margin-bottom: 330px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.big {
+		font-size: 26px;
+	}
+	.offer {
+		margin-bottom: 370px;
+	}
+
+}
+@media screen and (max-width: 380px) {
+	.offer {
+		margin-bottom: 370px;
+	}
+}
+@media screen and (max-width: 355px) {
+	.offer {
+		margin-bottom: 420px;
+	}
+	
+}
+@media screen and (max-width: 335px) {
+	.offer {
+		margin-bottom: 450px;
+	}
+}
